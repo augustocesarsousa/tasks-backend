@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage ('Just Test') {
             steps {
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'It is OK!'
+                sh 'echo It is OK!'
             }
         }
     }
