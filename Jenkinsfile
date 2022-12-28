@@ -54,7 +54,7 @@ pipeline {
         stage ('Functional Tests') {
             steps {
                 dir ('functional-test') {
-                    git credentialsId: 'githut_login', url: 'https://github.com/augustocesarsousa/tasks-functional-tests'
+                    git branch: 'main', credentialsId: 'githut_login', url: 'https://github.com/augustocesarsousa/tasks-functional-tests'
                     sh 'mvn test'
                 }
             }
