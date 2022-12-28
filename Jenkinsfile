@@ -14,7 +14,7 @@ pipeline {
                 withSonarQubeEnv('SONAR_LOCAL') {
                     sh "${scannerHome}/bin/sonar-scanner -e \
                     -Dsonar.projectKey=DeplyBack \
-                    -Dsonar.host.url=http://localhost:9000 \
+                    -Dsonar.host.url=http://${SERVER_ADDRESS}:9000 \
                     -Dsonar.login=5884034a5bb78728e5259e914b698b97a61bf4f5 \
                     -Dsonar.java.binaries=target \
                     -Dsonar.coverage.exclusions=**/.mvn/**,**/src/test/**,**/model/**,**Application.java"
